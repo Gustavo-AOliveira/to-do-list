@@ -1,7 +1,8 @@
 package br.com.gustavoaquino.todolist.entity;
 
-import br.com.gustavoaquino.todolist.DTO.CadastroTodo;
+
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -18,17 +19,19 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank
     private String nome;
+
+    @NotBlank
     private String descricao;
+
     private boolean realizado;
+
+    @Min(value = 1)
+    @Max(value = 10)
     private int prioridade;
 
-    public Todo(CadastroTodo cadastroTodo) {
-        this.nome = cadastroTodo.nome();
-        this.descricao = cadastroTodo.descricao();
-        this.realizado = cadastroTodo.realizado();
-        this.prioridade = cadastroTodo.prioridade();
-    }
 }
 
 
