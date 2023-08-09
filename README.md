@@ -11,6 +11,8 @@ Este é um projeto de exemplo de uma aplicação web de lista de tarefas (To-Do 
 - Bean Validation (Validação de Dados)
 - Maven (gerenciador de dependências)
 
+  Neste projeto, implementei o padrão Data Transfer Object (DTO) para melhorar a estrutura e a segurança da transferência de dados entre as camadas da aplicação. Utilizei DTOs para encapsular as informações que fluem na API do meu projeto, garantindo que somente os dados relevantes sejam compartilhados. Isso contribuiu para uma arquitetura mais organizada e uma melhor separação de preocupações.
+
 ## Funcionalidades Principais
 - Adicionar uma nova tarefa à lista.
 - Visualizar a lista de tarefas existentes.
