@@ -8,6 +8,7 @@ Este é um projeto de exemplo de uma aplicação web de lista de tarefas (To-Do 
 - Spring Boot
 - MySQL
 - Spring Data JPA (Java Persistence API)
+- Bean Validation (Validação de Dados)
 - Maven (gerenciador de dependências)
 
 ## Funcionalidades Principais
