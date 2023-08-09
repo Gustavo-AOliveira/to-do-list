@@ -1,5 +1,7 @@
 package br.com.gustavoaquino.todolist.controller;
 
+import br.com.gustavoaquino.todolist.ToDoDTO.AtualizacaoDados;
+import br.com.gustavoaquino.todolist.ToDoDTO.CadastroDeDados;
 import br.com.gustavoaquino.todolist.entity.Todo;
 import br.com.gustavoaquino.todolist.service.TodoService;
 import jakarta.validation.Valid;
@@ -17,8 +19,8 @@ public class TodoController {
     }
     @PostMapping
     @Transactional
-    public List<Todo> create(@RequestBody @Valid Todo todo){
-        return todoService.create(todo);
+    public void create(@RequestBody @Valid CadastroDeDados dadosCadastro){
+        todoService.create(dadosCadastro);
     }
     @GetMapping
     public List<Todo> list(){
@@ -26,12 +28,12 @@ public class TodoController {
     }
     @PutMapping
     @Transactional
-    public List<Todo> update(@RequestBody @Valid Todo todo){
-        return todoService.update(todo);
+    public void update(@RequestBody @Valid AtualizacaoDados dadosAtualizacao){
+        todoService.update(dadosAtualizacao);
     }
     @DeleteMapping("{id}")
-    public List<Todo> delete(@PathVariable("id") long id){
-        return todoService.delete(id);
+    public void delete(@PathVariable("id") long id){
+        todoService.delete(id);
     }
 
 }
